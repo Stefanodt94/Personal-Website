@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="über-mich.css" />
     <link rel="stylesheet" href="skills.css" />
+    <link rel="stylesheet" href="kontakt.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,11 +29,26 @@
     />
   </head>
   <body class="principal-page">
+    <button id="homeButton" onclick="scrollToTop()">
+      <img src="bilder/home.png" alt="home" />
+    </button>
     <div class="main-container">
       <header class="front" data-aos="fade-in" data-aos-duration="1500">
         <div class="logo-container">
           <img src="bilder/logo.png" alt="logo" class="logo" />
         </div>
+        <ul class="menu">
+          <li id="über_mich" data-translate="über_mich">
+            <a href="#über-mich">Über Mich</a>
+          </li>
+          <li id="skills" data-translate="skills">
+            <a href="#competence">Skills</a>
+          </li>
+          <li id="kontakt" data-translate="contact">
+            <a href="#contact">Kontakt</a>
+          </li>
+        </ul>
+
         <div class="icons">
           <a href="https://github.com/Stefanodt94">
             <div class="icon-container">
@@ -44,26 +60,7 @@
               <img src="bilder/linkedin.png" alt="linkedin" class="linkedin" />
             </div>
           </a>
-          <a href="https://www.facebook.com/stefano.tinco">
-            <div class="icon-container">
-              <img src="bilder/facebook.png" alt="facebook" class="facebook" />
-            </div>
-          </a>
-          <a href="https://www.instagram.com/stefano_dt94/">
-            <div class="icon-container">
-              <img
-                src="bilder/instagram.png"
-                alt="instagram"
-                class="instagram"
-              />
-            </div>
-          </a>
         </div>
-        <ul class="menu">
-          <li id="über_mich"><a href="#über-mich">Über mich</a></li>
-          <li id="berufserfahrung"><a href="#skills">Skills</a></li>
-          <li id="kontakt"><a href="#kontakt">Kontakt</a></li>
-        </ul>
       </header>
       <section class="body">
         <div class="container" data-aos="zoom-in-up" data-aos-duration="1500">
@@ -83,6 +80,7 @@
       <br />
       <section class="content">
         <p
+          data-translate="competence"
           class="kompetenzen"
           data-aos="flip-down"
           data-aos-duration="1000"
@@ -94,18 +92,20 @@
           class="card-container"
           data-aos="fade-up"
           data-aos-duration="1000"
-          data-aos-offset="300"
+          data-aos-offset="100"
         >
           <div
             class="card1"
-            data-aos="fade-up-left"
+            data-aos="zoom-out-up"
             data-aos-duration="1000"
             data-aos-offset="100"
           >
             <div class="card-content">
               <img src="bilder/programmierung.png" alt="icon" />
-              <h3 class="überschrift">Programmierung</h3>
-              <p class="text-card">
+              <h3 class="überschrift" data-translate="programming">
+                Programmierung
+              </h3>
+              <p class="text-card" data-translate="programming-text">
                 Ich beherrsche verschiedene Programmiersprachen und kann
                 vielseitige Anwendungen entwickeln. Diese Fähigkeiten machen
                 mich flexibel und in verschiedenen Bereichen einsetzbar. Ob es
@@ -117,14 +117,16 @@
           </div>
           <div
             class="card2"
-            data-aos="fade-down"
-            data-aos-duration="1500"
+            data-aos="zoom-out-up"
+            data-aos-duration="1000"
             data-aos-offset="100"
           >
             <div class="card-content">
               <img src="bilder/responsive.png" alt="icon" />
-              <h3 class="überschrift">Responsive Design</h3>
-              <p class="text-card">
+              <h3 class="überschrift" data-translate="responsive">
+                Responsive Design
+              </h3>
+              <p class="text-card" data-translate="responsive-text">
                 Dank meiner Kenntnisse im Responsive Design kann ich
                 sicherstellen, dass Websites und Anwendungen auf allen Geräten
                 optimal angezeigt werden. Egal ob auf einem Desktop, Tablet oder
@@ -137,14 +139,16 @@
           </div>
           <div
             class="card3"
-            data-aos="fade-up-right"
+            data-aos="zoom-out-up"
             data-aos-duration="1000"
             data-aos-offset="100"
           >
             <div class="card-content">
               <img src="bilder/check.png" alt="icon" />
-              <h3 class="überschrift">Qualitätssicherung</h3>
-              <p class="text-card">
+              <h3 class="überschrift" data-translate="quality">
+                Qualitätssicherung
+              </h3>
+              <p class="text-card" data-translate="quality-text">
                 Qualität und Zuverlässigkeit stehen bei meiner Arbeit im
                 Vordergrund. Ich lege großen Wert auf gründliches Testen und
                 Debugging, um sicherzustellen, dass die von mir entwickelten
@@ -160,8 +164,9 @@
     </div>
     <section class="content2" id="über-mich">
       <div class="über-mich" data-aos="fade-up" data-aos-duration="1300">
-        <p class="über-mich-schrift">WER BIN ICH</p>
+        <p class="über-mich-schrift" data-translate="who_i_am">WER BIN ICH</p>
         <p
+          data-translate="story"
           class="meine-geschichte"
           data-aos="fade-left"
           data-aos-offset="300"
@@ -172,6 +177,7 @@
         </p>
         <div class="text1">
           <p
+            data-translate="story1"
             class="description"
             data-aos="fade-in"
             data-aos-delay="200"
@@ -190,10 +196,11 @@
           </p>
           <div class="linie"></div>
           <p
+            data-translate="story2"
             class="description"
             data-aos="fade-in"
             data-aos-delay="500"
-            data-aos-duration="1200"
+            data-aos-duration="1100"
           >
             Während meiner beruflichen Laufbahn in Deutschland habe ich
             wertvolle Erfahrungen in unterschiedlichen Bereichen gesammelt, die
@@ -215,10 +222,10 @@
       <br />
       <div class="werte-container">
         <p
+          data-translate="werte"
           class="werte-title"
           data-aos="flip-down"
           data-aos-duration="1000"
-          data-aos-offset="100"
         >
           Werte, die mich leiten
         </p>
@@ -226,70 +233,86 @@
         <br />
         <br />
         <br />
-        <div
-          class="werte1"
-          data-aos="fade-down"
-          data-aos-duration="1000"
-          data-aos-offset="100"
-        >
-          <div class="respekt card">
+        <div class="werte1" data-aos="fade-down" data-aos-duration="1500">
+          <div
+            class="respekt card"
+            data-aos="fade-down"
+            data-aos-duration="500"
+          >
             <div class="inhalt">
-              <p class="card-überschrift">RESPEKT</p>
-              <p class="card-text">
+              <p class="card-überschrift" data-translate="respect">RESPEKT</p>
+              <p class="card-text" data-translate="respect-text">
                 Ich behandle alle Kollegen und Kunden mit Höflichkeit und
                 Wertschätzung, was eine positive und produktive Arbeitsumgebung
                 schafft.
               </p>
             </div>
           </div>
-          <div class="passion card">
+          <div
+            class="passion card"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
             <div class="inhalt">
-              <p class="card-überschrift">LEIDENSCHAFT</p>
-              <p class="card-text">
+              <p class="card-überschrift" data-translate="passion">
+                LEIDENSCHAFT
+              </p>
+              <p class="card-text" data-translate="passion-text">
                 Meine Begeisterung für Technologie und Programmierung treibt
                 mich an, kontinuierlich zu lernen und mich zu verbessern.
               </p>
             </div>
           </div>
-          <div class="professionalität card">
+          <div
+            class="professionalität card"
+            data-aos="fade-down"
+            data-aos-duration="1500"
+          >
             <div class="inhalt">
-              <p class="card-überschrift">PROFESSIONALITÄT</p>
-              <p class="card-text">
+              <p class="card-überschrift" data-translate="professionality">
+                PROFESSIONALITÄT
+              </p>
+              <p class="card-text" data-translate="professionality-text">
                 Ich lege großen Wert auf Pünktlichkeit, Zuverlässigkeit und
                 Qualität in all meinen Projekten.
               </p>
             </div>
           </div>
         </div>
-        <div
-          class="werte2"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-offset="100"
-        >
-          <div class="ausdauer card">
+        <div class="werte2" data-aos="fade-up" data-aos-duration="1500">
+          <div class="ausdauer card" data-aos="fade-up" data-aos-duration="500">
             <div class="inhalt">
-              <p class="card-überschrift">AUSDAUER</p>
-              <p class="card-text">
+              <p class="card-überschrift" data-translate="patience">AUSDAUER</p>
+              <p class="card-text" data-translate="patience-text">
                 Herausforderungen und Rückschläge halten mich nicht auf. Ich
                 bleibe fokussiert und arbeite hart, bis ich mein Ziel erreiche.
               </p>
             </div>
           </div>
-          <div class="creativität card">
+          <div
+            class="creativität card"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
             <div class="inhalt">
-              <p class="card-überschrift">KREATIVITÄT</p>
-              <p class="card-text">
+              <p class="card-überschrift" data-translate="creativity">
+                KREATIVITÄT
+              </p>
+              <p class="card-text" data-translate="creativity-text">
                 Ich finde innovative Lösungen und bringe frische Ideen in jedes
                 Projekt ein, um einzigartige und effektive Ergebnisse zu
                 erzielen.
               </p>
             </div>
           </div>
-          <div class="empathie card">
+          <div
+            class="empathie card"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
             <div class="inhalt">
-              <p class="card-überschrift">EMPATHIE</p>
-              <p class="card-text">
+              <p class="card-überschrift" data-translate="empathy">EMPATHIE</p>
+              <p class="card-text" data-translate="empathy-text">
                 Ich höre aktiv zu und verstehe die Bedürfnisse meiner Kollegen
                 und Kunden, um gemeinsam die besten Ergebnisse zu erzielen.
               </p>
@@ -303,92 +326,72 @@
             class="interessen-title"
             data-aos="fade-in"
             data-aos-duration="2000"
-            data-aos-offset="200"
           >
-            <p class="interessen-title1">Ich bin</p>
+            <p class="interessen-title1" data-translate="i_am">Ich bin</p>
             <p
+              data-translate="available_for"
               class="interessen-title2"
               data-aos="slide-left"
               data-aos-duration="1000"
-              data-aos-offset="200"
             >
               offen für
             </p>
           </div>
-          <div class="circles-container">
-            <div
-              class="circle"
-              data-text="arbeit-text"
-              data-aos="fade-in"
-              data-aos-duration="1000"
-              data-aos-offset="200"
-            >
-              <div class="image">
-                <img src="bilder/arbeit.png" alt="Arbeit" />
-              </div>
-              <p class="überschrift">Festanstellung</p>
-              <i
-                class="fas fa-chevron-down arrow-icon"
-                data-text="arbeit-text"
-              ></i>
+          <br />
+          <br />
+          <br />
+          <div class="interessen-inhalt">
+            <div class="arbeit">
+              <img
+                class="interessen-image"
+                src="bilder/arbeit.png"
+                alt="arbeit"
+              />
+              <h2 data-translate="job">Festanstellung</h2>
+              <p data-translate="text1">
+                Ich bin auf der Suche nach neuen und spannenden Möglichkeiten.
+                Eine davon ist eine Festanstellung. Mit mir an Bord können Sie
+                auf einen seriösen, loyalen Mitarbeiter zählen, der stets offen
+                für neue Herausforderungen und Diskussionen ist. Das macht mich
+                zum perfekten Kandidaten für Ihr Unternehmen.
+              </p>
             </div>
-            <div
-              class="circle"
-              data-text="projekte-text"
-              data-aos="fade-in"
-              data-aos-duration="2000"
-              data-aos-offset="200"
-            >
-              <div class="image">
-                <img src="bilder/projekt.png" alt="Projekt" />
-              </div>
-              <p class="überschrift">Projekte</p>
-              <i
-                class="fas fa-chevron-down arrow-icon"
-                data-text="projekte-text"
-              ></i>
+            <div class="projekte">
+              <img
+                class="interessen-image"
+                src="bilder/projekt.png"
+                alt="project"
+              />
+              <h2 data-translate="project">Projekten</h2>
+              <p data-translate="text2">
+                Hast du ein Projekt und benötigst Unterstützung? Möchtest du
+                eine Website für dein Unternehmen erstellen? Suchst du jemanden
+                Zuverlässigen für dein Team? Dann bin ich die richtige Person
+                für dich. Dank meiner Kreativität und Fähigkeiten kann ich
+                Professionalität und Originalität bieten.
+              </p>
             </div>
-            <div
-              class="circle"
-              data-text="lernen-text"
-              data-aos="fade-in"
-              data-aos-duration="3000"
-              data-aos-offset="200"
-            >
-              <div class="image">
-                <img src="bilder/lernen.png" alt="Lernen" />
-              </div>
-              <p class="überschrift">Weiterbildung</p>
-              <i
-                class="fas fa-chevron-down arrow-icon"
-                data-text="lernen-text"
-              ></i>
+            <div class="grow">
+              <img
+                class="interessen-image"
+                src="bilder/lernen.png"
+                alt="lernen"
+              />
+              <h2 data-translate="professional_growth">Weiterbildung</h2>
+              <p data-translate="text3">
+                Ich strebe immer danach, mich zu verbessern und neue Dinge zu
+                lernen! Ich bin stets offen für den Dialog und nehme
+                konstruktive Kritik problemlos an. Im Leben hört man nie auf zu
+                lernen, und gerade das motiviert mich, kontinuierlich an meinen
+                Fähigkeiten zu arbeiten und neue Herausforderungen anzunehmen.
+              </p>
             </div>
-          </div>
-          <div class="text-container" id="text-container">
-            <p class="hidden-text" id="arbeit-text">
-              Ich bin auf der Suche nach neuen und spannenden Möglichkeiten.
-              Eine davon ist eine Festanstellung. Mit mir an Bord können Sie auf
-              einen seriösen, loyalen Mitarbeiter zählen, der stets offen für
-              neue Herausforderungen und Diskussionen ist. Das macht mich zum
-              perfekten Kandidaten für Ihr Unternehmen.
-            </p>
-            <p class="hidden-text" id="projekte-text">
-              Hast du ein Projekt und benötigst Unterstützung? Möchtest du eine
-              Website für dein Unternehmen erstellen? Suchst du jemanden
-              Zuverlässigen für dein Team? Dann bin ich die richtige Person für
-              dich. Dank meiner Kreativität und Fähigkeiten kann ich
-              Professionalität und Originalität bieten.
-            </p>
-            <p class="hidden-text" id="lernen-text">
-              Ich strebe immer danach, mich zu verbessern und neue Dinge zu
-              lernen! Ich bin stets offen für den Dialog und nehme konstruktive
-              Kritik problemlos an. Im Leben hört man nie auf zu lernen
-            </p>
           </div>
         </div>
         <div class="button-container">
-          <button class="button"><a href="#kontakt">Zum Kontakt</a></button>
+          <a href="#contact" class="button" data-translate="to_contact"
+            >Zum Kontakt >></a
+          >
         </div>
       </div>
     </section>
@@ -402,21 +405,273 @@
     <br />
     <br />
     <br />
-    <section class="skills">
+    <section class="skills" id="competence">
       <div class="skills-container">
         <div class="skills-überschrift-container">
-          <p class="skills-überschrift">
-            Meine Skills
-            <img src="bilder/gear-icon.png" alt="gear" class="skills-gear" />
+          <p
+            data-translate="technical_skills"
+            class="skills-überschrift"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            Meine Hart Skills
           </p>
+          <img src="bilder/gear-icon.png" alt="gear" class="skills-gear" />
+          <img src="bilder/gear-icon.png" alt="gear" class="skills-gear2" />
+        </div>
+        <p
+          data-translate="skills_description"
+          class="skills-description"
+          data-aos="fade-in"
+          data-aos-duration="2000"
+        >
+          Ich habe mir meine technischen Fähigkeiten durch
+          <strong>Selbststudium</strong> und praktische Erfahrung angeeignet.
+          Durch ständige Weiterbildung und die Arbeit an persönlichen Projekten
+          habe ich ein solides Verständnis für verschiedene Programmiersprachen
+          und Technologien entwickelt. Mein Fokus liegt darauf, kontinuierlich
+          zu lernen und innovative Lösungen zu entwickeln. Ich bringe meine
+          Kreativität und technisches Know-how ein, um qualitativ hochwertige
+          Ergebnisse zu erzielen.
+        </p>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="skills-card-container">
+          <div class="skills-card">
+            <div class="incons-container">
+              <img src="bilder/html.png" alt="html" class="img" />
+              <img src="bilder/css.png" alt="css" class="img" />
+              <img src="bilder/js.png" alt="js" class="img" />
+            </div>
+            <p class="card-title">HTML, CSS, JAVASCRIPT</p>
+            <p class="card-text" data-translate="html">
+              Ich verfüge über solide Kenntnisse in HTML, CSS und JavaScript,
+              was es mir ermöglicht, ansprechende und interaktive Webseiten zu
+              erstellen. Mit HTML strukturiere ich den Inhalt meiner Seiten,
+              während CSS für das Styling und das Layout verantwortlich ist.
+              JavaScript nutze ich, um die Benutzererfahrung zu verbessern und
+              dynamische Elemente hinzuzufügen.
+            </p>
+          </div>
+          <div class="skills-card">
+            <img src="bilder/angular.png" alt="angular" class="img"/ >
+            <p class="card-title">ANGULAR</p>
+            <p class="card-text" data-translate="angular">
+              Mit Angular entwickle ich leistungsstarke, responsive Websites.
+              Meine Kompetenzen umfassen die Nutzung von TypeScript,
+              Angular-Komponenten, und -Services für effiziente
+              Single-Page-Anwendungen. Damit garantiere ich nicht nur
+              Typensicherheit, sondern auch die schnelle Entwicklung und
+              kreative Lösungen für komplexe Herausforderungen. Mit Angular
+              Material bin ich in der Lage, moderne und intuitive Webkomponenten
+              zu entwerfen und umzusetzen.
+            </p>
+          </div>
+          <div class="skills-card">
+            <img src="bilder/python.png" alt="python" class="img" />
+            <p class="card-title">PYTHON</p>
+            <p class="card-text" data-translate="python">
+              Zusätzlich zu meinen Webentwicklungskompetenzen arbeite ich auch
+              mit Python. Obwohl ich mich noch im Lernprozess befinde, entwickle
+              ich bereits grundlegende Fähigkeiten. Die Vielseitigkeit dieser
+              Sprache ermöglicht es mir, mich in verschiedenen Bereichen der
+              Softwareentwicklung weiterzuentwickeln.
+            </p>
+          </div>
+          <div class="skills-card">
+            <img
+              src="bilder/java.png"
+              alt="java"
+              style="filter: invert(100%) grayscale(100%)"
+              class="img"
+            />
+            <p class="card-title">JAVA</p>
+            <p class="card-text" data-translate="java">
+              Ich befinde mich noch im Lernprozess von Java, mache aber bereits
+              meine ersten Schritte. Obwohl ich noch Anfänger bin, habe ich
+              angefangen, einfache Programme zu entwickeln und mich mit den
+              Grundlagen der Sprache vertraut zu machen. Mein Ziel ist es, meine
+              Fähigkeiten in Java kontinuierlich auszubauen und komplexere
+              Anwendungen zu erstellen.
+            </p>
+          </div>
+          <div class="skills-card">
+            <img src="bilder/nodejs.png" alt="node" class="img" />
+            <p class="card-title">NODE JS</p>
+            <p class="card-text" data-translate="node_js">
+              Mit Grundkenntnissen im Backend, insbesondere in Node.js verfüge
+              ich über die Fähigkeit, serverseitige Anwendungen zu entwickeln
+              und zu verwalten. Meine Kenntnisse ermöglichen es mir,
+              grundlegende Funktionen wie das Erstellen von Servern, das
+              Verarbeiten von Anfragen und das Interagieren mit Datenbanken in
+              Node.js zu implementieren. Während ich weiterhin lerne und mich
+              entwickle, bin ich bereit, meine Fähigkeiten im Backend weiter
+              auszubauen und komplexere Projekte zu übernehmen.
+            </p>
+          </div>
+          <div class="skills-card">
+            <img
+              src="bilder/github.png"
+              alt="github"
+              style="filter: invert(100%) grayscale(100%)"
+              class="img"
+            />
+            <p class="card-title">GITHUB</p>
+            <p class="card-text" data-translate="github">
+              Durch meine fundierten Kenntnisse in der Nutzung von GitHub
+              demonstriere ich eine effektive Versionierung und Zusammenarbeit
+              in Projekten. Mit Branching, Pull Requests und Issue Tracking bin
+              ich in der Lage, einen strukturierten und effizienten
+              Entwicklungsprozess zu gewährleisten. Meine GitHub-Repositories
+              spiegeln meine Fähigkeit wider, qualitativ hochwertigen Code zu
+              produzieren und erfolgreich im Teamumfeld zu arbeiten.
+            </p>
+          </div>
         </div>
       </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <div class="soft-skills-container">
+        <div
+          class="soft-skills-überschrift"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          <p data-translate="soft_skills">Meine Soft Skills</p>
+          <br />
+        </div>
+        <div
+          class="chart-container"
+          data-aos="fade-up"
+          data-aos-duration="1700"
+        >
+          <canvas id="myChart"></canvas>
+        </div>
+        <div class="soft-skills-list">
+          <ul>
+            <li class="list" data-translate="communication">
+              Kommunikationsfähigkeit
+            </li>
+            <li class="list" data-translate="Customer">Kundenorientierung</li>
+            <li class="list" data-translate="organisation">
+              Organisationstalent
+            </li>
+            <li class="list" data-translate="flexibility">Flexibilität</li>
+            <li class="list" data-translate="sales">Verkaufstalent</li>
+            <li class="list" data-translate="teamwork">Teamfähigkeit</li>
+            <li class="list" data-translate="problem-solving">
+              Problemlösungsfähigkeit
+            </li>
+          </ul>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
     </section>
+
+    <section class="kontakt-page" id="contact">
+      <div
+        class="kontakt-überschrift"
+        data-aos="fade-left"
+        data-aos-duration="1500"
+        data-aos-offset="-100"
+      >
+        <p>Let's make something awesome together!</p>
+      </div>
+      <div class="contact-description-container">
+        <p class="contact-description" data-translate="contact-txt">
+          Wenn du bereit bist, deine Ideen in die Tat umzusetzen oder Fragen
+          hast, freue ich mich auf deine Nachricht. Kontaktiere mich über das
+          Formular unten, und lass uns gemeinsam großartige Dinge verwirklichen.
+        </p>
+      </div>
+      <div class="formular">
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="surname" data-translate="surname">Name*</label>
+            <input
+              type="text"
+              id="surname"
+              name="name"
+              autocomplete="family-name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="vorname" data-translate="name">Vorname*</label>
+            <input
+              type="text"
+              id="vorname"
+              name="vorname"
+              autocomplete="name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="firma" data-translate="company">Firma</label>
+            <input type="text" id="firma" name="firma" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email*</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message" data-translate="message">Nachricht*</label>
+            <textarea id="message" name="message" rows="10" required></textarea>
+            <button type="submit" class="submit" data-translate="sent">
+              Senden
+            </button>
+          </div>
+        </form>
+      </div>
+      <br />
+      <br />
+      <br />
+    </section>
+    <footer>
+      <p class="author">Designed by Stefano Di Tinco</p>
+      <div class="footer">
+        <div class="dropdown">
+          <button class="dropbtn">
+            <img src="bilder/de.png" alt="English Flag" class="flag-icon" />
+          </button>
+          <div class="dropdown-content">
+            <a href="#" data-lang="en">
+              <img src="bilder/en.png" alt="English" class="flag-icon" />
+            </a>
+            <a href="#" data-lang="it">
+              <img src="bilder/it.png" alt="Italian" class="flag-icon" />
+            </a>
+            <a href="#" data-lang="de">
+              <img src="bilder/de.png" alt="German" class="flag-icon" />
+            </a>
+          </div>
+        </div>
+        <div class="daten"></div>
+      </div>
+    </footer>
     <script src="script.js"></script>
     <script src="anime.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="email.js"></script>
     <script>
       AOS.init();
     </script>
+    <script src="chart.js"></script>
   </body>
 </html>

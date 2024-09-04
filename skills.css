@@ -1,5 +1,5 @@
 .skills {
-  background: linear-gradient(to bottom, #ffffff 0%, black 80%, black 100%);
+  background-color: #1b1c11;
   margin: 0;
   padding: 0;
   border: 0;
@@ -9,11 +9,16 @@
 .skills-überschrift-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .skills-überschrift {
   font-size: 5rem;
   font-weight: 600;
+  color: white;
+  margin-right: 1rem;
 }
 
 .skills-gear {
@@ -21,4 +26,239 @@
   max-height: auto;
   width: 100%;
   height: 100%;
+  filter: invert(100%) grayscale(100%);
+}
+
+.skills-gear2 {
+  max-width: 50px;
+  max-height: auto;
+  width: 100%;
+  height: 100%;
+  filter: invert(100%) grayscale(100%);
+  margin-bottom: 2rem;
+  margin-left: -1rem;
+}
+
+.skills-description {
+  font-size: 1.4rem;
+  font-weight: 200;
+  color: white;
+  text-align: justify;
+  padding: 2rem 10rem;
+  line-height: 4rem;
+}
+
+.skills-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 5%;
+}
+
+.skills-card {
+  flex: 1 1 30%;
+  max-width: 30%;
+  min-width: 250px;
+  min-height: 40rem;
+  max-height: 100rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5),
+    -8px -8px 16px rgba(255, 255, 255, 0.1),
+    inset 12px 12px 24px rgba(0, 0, 0, 0.7),
+    inset -12px -12px 24px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  overflow-x: hidden;
+}
+
+.skills-card:hover .skills-card:focus {
+  transform: scale(1.02);
+}
+
+.card-title,
+.card-text {
+  text-align: center;
+}
+
+.card-title {
+  color: white;
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.soft-skills-container {
+  margin: 0;
+  padding: 9rem;
+}
+
+.soft-skills-überschrift {
+  font-size: 4rem;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.soft-skills-list {
+  display: none;
+}
+
+.chart-container {
+  width: 90%;
+  margin: auto;
+  padding: 5rem;
+  background-color: #1b1c11;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5),
+    -8px -8px 16px rgba(255, 255, 255, 0.1),
+    inset 12px 12px 24px rgba(0, 0, 0, 0.7),
+    inset -12px -12px 24px rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+@media screen and (max-widtg: 1600px) {
+  .skills-card {
+    flex: 1 1 calc(50% -20px);
+    max-width: cald(50% -20px);
+    min-height: 20rem;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .skills-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-height: 20rem;
+    height: auto;
+  }
+
+  .skills-description {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills-überschrift {
+    font-size: 1.6rem;
+    margin-right: 0;
+  }
+
+  .skills-gear {
+    width: 50px;
+  }
+
+  .skills-gear2 {
+    width: 25px;
+  }
+
+  .skills-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .skills-description {
+    padding: 0 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  .skills-überschrift {
+    font-size: 2.5rem;
+  }
+
+  .skills-card:hover {
+    transform: scale(1.02);
+  }
+
+  .soft-skills-container {
+    padding: 2rem;
+  }
+
+  .soft-skills-überschrift {
+    font-size: 2rem;
+  }
+  .chart-container {
+    margin: 0;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 20px;
+    margin-bottom: 100px;
+    box-shadow: none;
+    border: none;
+  }
+
+  #myChart {
+    margin: 0;
+    width: 100%;
+    max-height: 100%;
+    margin-bottom: 100px;
+  }
+
+  .soft-skills-list {
+    display: flex;
+    margin: 0;
+    padding: 2rem;
+    margin-top: -10rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .list {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    color: white;
+  }
+
+  .list::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #3498db;
+    border-radius: 4px;
+  }
+
+  .list:nth-child(1)::before {
+    background-color: rgba(255, 0, 0, 1);
+  }
+  .list:nth-child(2)::before {
+    background-color: rgba(0, 255, 0, 1);
+  }
+  .list:nth-child(3)::before {
+    background-color: rgba(0, 0, 255, 1);
+  }
+  .list:nth-child(4)::before {
+    background-color: rgba(255, 255, 0, 1);
+  }
+  .list:nth-child(5)::before {
+    background-color: rgba(255, 165, 0, 1);
+  }
+  .list:nth-child(6)::before {
+    background-color: rgba(128, 0, 128, 1);
+  }
+  .list:nth-child(7)::before {
+    background-color: rgba(0, 255, 255, 1);
+  }
 }

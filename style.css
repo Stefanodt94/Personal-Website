@@ -18,6 +18,81 @@ html {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   border: 0;
+  overflow-x: hidden;
+}
+
+#homeButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out,
+    transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#homeButton img {
+  width: 100%;
+  height: auto;
+}
+
+#homeButton:hover {
+  background-color: #3db1ff;
+  transform: scale(1.2);
+}
+
+#homeButton.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.flag-icon {
+  width: 50px;
+  height: auto;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  top: -171%;
+  left: 50px;
+}
+
+.dropdown-content a {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.dropdown-content a:hover {
+  background-color: transparent;
+}
+
+.dropdown:hover .dropdown-content {
+  display: inline;
 }
 
 .main-container {
@@ -29,11 +104,14 @@ html {
 }
 
 .logo {
-  width: 40rem;
+  display: wrap;
+  width: 100%;
+  max-width: 40rem;
 }
 
 .front {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -44,11 +122,10 @@ html {
   list-style: none;
   padding: 0;
   margin: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
   font-size: 1.2rem;
-}
-
-.menu li {
-  margin-right: 50px;
+  gap: 2.5rem;
 }
 
 .menu li a {
@@ -71,7 +148,8 @@ html {
   transition: all 0.2s ease-in-out;
 }
 
-.menu li a:hover::after {
+.menu li a:hover::after,
+.menu li a:focus::after {
   visibility: visible;
   transform: scaleX(1);
 }
@@ -79,28 +157,29 @@ html {
 .icons {
   display: flex;
   justify-content: space-around;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
   align-items: center;
 }
 
 .icons img {
-  max-width: 50px;
+  max-width: 45px;
   height: auto;
   margin: 0 2rem;
 }
 
 .github,
-.linkedin,
-.facebook,
-.instagram {
+.linkedin {
   width: 100%;
   height: auto;
   transition: transform 0.2s ease;
 }
 
 .github:hover,
+.github:focus,
 .linkedin:hover,
-.facebook:hover,
-.instagram:hover {
+.linkedin:focus {
   filter: invert(20%) grayscale(20%);
   transform: scale(1.2);
   transition: transform 0.2s ease;
@@ -109,7 +188,7 @@ html {
 .container {
   display: flex;
   justify-content: space-around;
-  background-color: rgb(0, 0, 0);
+  background-color: #1b1c11;
 }
 
 .photo {
@@ -196,7 +275,7 @@ html {
 .card-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   padding: 10%;
   padding-left: 5%;
@@ -206,41 +285,70 @@ html {
 .card1,
 .card2,
 .card3 {
-  width: 30rem;
-  height: 35rem;
+  width: calc(33.333% - 20px);
+  min-width: 300px;
+  height: auto;
+  min-height: 600px;
   border-radius: 5px;
   background-color: gainsboro;
-  padding: 10px;
+  padding: 20px;
   margin: 10px;
-  flex: 1;
-  align-items: center;
+  flex: 1 1 calc(33.333% - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
 }
 
 .card-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .card-content img {
   margin-bottom: 1rem;
+  max-width: 100%;
 }
 
 .überschrift {
   font-weight: 300;
   font-size: 2rem;
-  align-items: center;
+  margin-bottom: 1rem;
 }
 
 .text-card {
   font-weight: 200;
   font-size: 1.1rem;
   padding: 1rem;
+  margin-bottom: auto;
 }
 
 @media screen and (max-width: 768px) {
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    border: 0;
+    overflow-x: hidden;
+  }
+
+  #homeButton {
+    width: 30px;
+    height: 30px;
+    bottom: 20px;
+    right: 6px;
+  }
+
+  #homeButton:hover #homeButton:focus {
+    transform: scale(1.3);
+  }
+
   .main-container {
     padding: 1rem;
   }
@@ -269,17 +377,15 @@ html {
 
   .menu {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    margin: 1rem 0;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 2rem;
   }
 
   .menu li {
     margin: 0.5rem 0;
-  }
-
-  .divisor {
-    visibility: hidden;
   }
 
   .container {
@@ -338,6 +444,7 @@ html {
   .card2,
   .card3 {
     height: auto;
+    font-size: 1rem;
   }
 
   .überschrift {
