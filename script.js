@@ -114,7 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //Title animations
 document.addEventListener("DOMContentLoaded", function () {
-  const border = document.querySelector(".border");
   const titles = document.querySelectorAll(".title");
 
   function startTitleAnimations() {
@@ -126,8 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   setTimeout(() => {
-    /* border.classList.add("animation"); */
-    setTimeout(startTitleAnimations, 1500);
+    setTimeout(startTitleAnimations, 2500);
   }, 1500);
 });
 

@@ -230,7 +230,7 @@ html {
   flex-direction: column;
   justify-content: space-between;
   opacity: 0;
-  animation: borderAnimation 2s ease 1s 1 normal forwards;
+  animation: borderAnimation 2s ease 2s 1 normal forwards;
 }
 
 @keyframes borderAnimation {
